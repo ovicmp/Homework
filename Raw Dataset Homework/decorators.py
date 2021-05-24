@@ -19,6 +19,11 @@ def greet(name):
     return f"Greetings {name}!"
 
 
-print(greet("world"))
-list_append_function()
-addition(0, 2.2)
+def __main__():
+    print(greet("world"))
+    list_append_function()
+    addition(0, 2.2)
+
+
+__main__()
+
