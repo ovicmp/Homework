@@ -81,8 +81,18 @@ def list_of_dicts(year, values_list):  # passing the country year and value list
     return country_list
 
 
+def get_country_data(dataset, values_list):
+    dataset_country = dataset.get(values_list)
+    return dataset_country
+
+
 def __main__():
-    pprint.pprint(get_country(raw_data))
+    prepare_data = get_country(raw_data)
+    pprint.pprint(prepare_data)
+    # data_with_year = data_by_year(prepare_data, '2012')
+    # print(data_with_year)
+    country_get_data = get_country_data(prepare_data, 'RO')
+    print('RO:', country_get_data, 'RO')
 
 
 __main__()
